@@ -1,0 +1,80 @@
+/**
+ * Plugin criado por:
+ * Paulo Cezario
+ * https://github.com/phscezario
+ **/
+ @keyframes popFadeIn{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+[rel^="showpopup"], .close-popup {
+    cursor: pointer;
+}
+#popup-shadowbox, #popup-close, .popup-window, #popup-show {
+    position: fixed;
+}
+/* Shadowbox */
+#popup-shadowbox {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    z-index:1000000004;
+}
+/* Botão de Fechar */
+#popup-close {
+    font-size: 52px; 
+    top: 5px;
+    right: 5px;
+    width:60px;
+    text-align:center;
+    z-index:1000000010;
+    color:#FFF;
+    cursor:pointer;
+    transition: 0.2s;
+}
+#popup-close:hover{
+    -moz-opacity: 0.7;
+    opacity:.70;
+    filter: alpha(opacity=70);
+}
+/* Ocultando containers */
+#popup-container{
+    display:none;
+    visibility: hidden;
+}
+/* Box Popup */
+.popup-window {
+    left: 50%;
+    top: 50%;
+    width: 100%;  /* Numero fixo ou 100% */
+    height: 550px; /* Numero fixo ou auto */
+    max-width: 650px;
+    box-shadow: 0 0 10px 0 #000;
+    border-radius: 10px;
+    z-index:1000000005;
+    overflow: auto;
+}
+.popup-content {
+    background-color:#fff;
+    z-index: 100;
+    overflow:auto;
+    padding: 0 20px;
+    height: 100%;
+    clear: both;
+}
+#popup-show {
+    z-index:1000000005;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    animation: popFadeIn .5s;
+}
+/* Mobile com Media Query */ 
+@media only screen and (max-width: 600px) {
+    .popup-content {
+        padding:5px;
+    }
+}
