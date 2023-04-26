@@ -7,13 +7,13 @@
 <h3>O que precisa:</h3>
 
 -   Você deve colocar o tributo rel como "showpopup" e um id em todos os elementos que forem abrir uma pop-up.<br>
-    Exemplo: < div rel="showpopup" id="item2" >
+    Exemplo: `<div rel="showpopup" id="item2">`
 
 -   As pop-ups devem estar dentro de um container com a id="popup-container".<br>
-    Exemplo: < div id="popup-container" >
+    Exemplo: `<div id="popup-container">`
 
 -   Cada pop-up precisa ter a class="popup-window" e um atributo data-id igual o id do elemento que ele vai abrir.<br>
-    Exemplo: < div class="popup-window" data-id="item2" >
+    Exemplo: `<div class="popup-window" data-id="item2">`
 
 <h3>Como funciona?</h3>
 O script vai verificar e copiar todos elementos do container e adicionar a um array, depois disso vai remove-lo do DOM antes mesmo que ele carregue todos os itens, deixando assim a pagina mais leve.<br>
